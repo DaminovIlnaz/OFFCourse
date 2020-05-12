@@ -92,4 +92,32 @@
         $.preventDefault()
     });
 
+    //Carousel_2
+    if ($.fn.carousel_2) {
+        var tutors = $('.tutors-slide');
+        tutors.owlCarousel({
+            items: 3,
+            margin: 0,
+            loop: true,
+            nav: true,
+            navText: ['<i class="fa fa-angle-left"></i>', '<i class="fa fa-angle-right"></i>'],
+            dots: false,
+            autoplay: true,
+            autoplayTimeout: 6000,
+            smartSpeed: 1000,
+            center: true,
+            responsive: {
+                0: {
+                    items: 1
+                },
+                576: {
+                    items: 2
+                },
+                992: {
+                    items: 3
+                }
+            }
+        });
+    }
+
 })(jQuery);
